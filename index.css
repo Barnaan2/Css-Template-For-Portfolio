@@ -131,6 +131,106 @@ line-height: 1.6;
 display: grid;
 grid-template-columns: [container-start]
 repeat(12, minmax(min-content,12.5rem))
-[content-end];
+[container-end];
 grid-template-rows: repeat(9,min-content);
+justify-content: center;
+}
+.over-all-layout{
+grid-column: container-start / container-end;
+
+}
+
+
+
+
+
+
+/* header section */
+.header{
+    background-color: var(--color-quaternary);
+    padding: var(--padding-d-m-v) var(--padding-d-l-h) ;
+    display: flex;
+    column-gap: 2rem;
+    justify-content: space-between;
+    position: relative;
+
+}
+.header::after{
+    content: "";
+ position: absolute;
+ bottom: -49.5rem;
+ left: 0;
+ height: 50rem;
+ width: 100%;
+ background-color: var(--color-primary);
+clip-path: polygon(0 0, 100% 0, 100% 41%, 0 77%);
+z-index: -1;
+}
+.header__logo a{
+    font-size: var(--font-size-st-l);
+    color: var(--color-secondary);
+
+}
+.header__nav{
+    display: flex;
+    gap: 3rem;
+ 
+
+}
+.header__nav a {
+    font-size: var(--font-size-st-m);
+    color: var(--color-secondary);
+    transition: all 0.2s ease-in-out;
+}
+.header__nav a:first-of-type{
+   color: white;
+}
+.header__nav a:hover{
+    background-color: black;
+    padding: 0 var(--padding-d-s-h);
+}
+
+
+/* hero section */
+.hero{
+    height: 80vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+position: relative;
+}
+.hero__bg{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100%;
+    width: 90%;
+    z-index: -1;
+}
+.hero__bg img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.hero__content{
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    color: rgb(245, 0, 0);
+}
+.hero__content--mini--title{
+    font-size: var(--font-size-d-m);
+    font-family: var(--font-family-title);
+
+}
+.hero__content .hero__content--title{
+    font-family: var(--font-family-title);
+    font-size: var(--font-size-d-l);
+}
+.hero__content--links a{
+
+    color: white;
+    background-color: blue;
+    padding: var(--padding-st-l-v) var(--padding-st-l-h);
 }
