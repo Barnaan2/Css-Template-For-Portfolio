@@ -13,7 +13,7 @@ You can use it for your protifolio ,This contents are completely free.
 @import url('https://fonts.googleapis.com/css2?family=Caveat&family=Oswald:wght@200&display=swap');
 
 /* 
-// this one is for headers
+
 font-family: 'Oswald', sans-serif;
 font-family: 'Caveat', cursive;
  */
@@ -101,11 +101,12 @@ font-family: 'Caveat', cursive;
 }
 /* section title */
 .section__title{
-    font-size: var(--font-size-d-sc);
+    font-size: var(--font-size-st-l);
+    font-family:var(--font-family-title) ;
     font-weight: 900;
 }
 .section__para{
-    font-size: var(--font-size-st-sc);
+    font-size: var(--font-size-st-l);
     color: var(--color-quaternary);
 }
 
@@ -262,3 +263,78 @@ position: relative;
   color: var(--color-primary);
 border: 1px solid var(--color-primary);
 }
+
+/* personal info section */
+.personal-info{
+display: flex;
+align-items: center;
+justify-content: space-between;
+gap: 10rem;
+}
+.personal-info__content{
+    flex-basis: 50%;
+   display: flex; 
+   flex-direction: column;
+   gap:2rem;
+}
+
+.personal-info__content--experience{
+display: flex;
+flex-direction: column;
+gap: 2rem;
+}
+.personal-info__content--experience div{
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+.personal-info__content--experience div i{
+    font-size: var(--font-size-st-sc);
+    padding: var(--padding-st-s-v);
+    border-radius: 50%;
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+}
+
+
+
+.peronal-info__img{
+    flex-basis: 50%;
+    display: flex;
+    justify-content: flex-end;
+   
+    position: relative;
+  }
+  
+.peronal-info__img img{
+    height: 80%;
+    width: 80%;
+
+}
+.peronal-info__img img:hover{
+    height: 100%;
+    width: 100%;
+    transition: all 0.5s ease-in-out;
+
+}
+  .peronal-info__img::before,
+  .peronal-info__img::after{
+    content: " ";
+    background-color: rgb(57, 48, 48);
+    position: absolute;
+    z-index: -1;
+  }
+  .peronal-info__img::before{
+    top: -5%;
+    left: 16%;
+    width: 50%;
+    height: 50%;
+    background-color:white;
+  }
+  .peronal-info__img::after{
+    top: 5%;
+    right: -5%;
+    width: 80%;
+    height: 100%;
+    background-color:white;
+  }
