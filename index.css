@@ -1,0 +1,136 @@
+/* 
+UI and UX designer  Bernabas Tekkalign;
+Github @Barnaan2:
+Telegram @Barnaan;
+Email Barnaantekalign@gmail.com
+
+Portifolio template for Developers.  
+You can use it for your protifolio ,This contents are completely free.
+
+*/
+
+/*  FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Oswald:wght@200&display=swap');
+
+/* 
+// this one is for headers
+font-family: 'Oswald', sans-serif;
+font-family: 'Caveat', cursive;
+ */
+
+ /* General Style */
+ 
+ *,
+ *::before,*::after{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+ }
+ :root{
+    /* its just ammount of 10px from 16px */
+
+    font-size: 62.5%;
+    /* custom properties for padding. key
+    1. sizing nature
+    d = dynamic
+    st = static
+    -----------sizing
+    L = Large
+    M = medium
+    S = small
+    XS = extra small
+    C = Customized
+
+    ------ orientation
+    h = horizontal 
+    v = vertical
+   */
+    --color-primary:rgb(48, 44, 44);
+    --color-secondary:rgb(212, 199, 199);
+    --color-teritary:rgb(5, 27, 71);
+    --color-quaternary:rgb(92, 92, 92);
+
+    --padding-d-l-v: calc(2rem + 12vh);
+    --padding-d-l-h: calc(2rem + 12vw);
+
+    --padding-d-mc-v: calc(2rem + 4vh);
+    --padding-d-mc-h: calc(2rem + 4vw);
+
+    --padding-d-m-v: calc(2rem + 2vh);
+    --padding-d-m-h: calc(2rem + 2vw);
+
+    --padding-d-s-v: calc(2rem + 1vh);
+    --padding-d-s-h: calc(2rem + 1vw);
+
+    --padding-st-l-v: 2rem;
+    --padding-st-l-h: 3rem;
+
+    --padding-st-m-h: 2.5rem;
+    --padding-st-m-v: 1.5rem; 
+
+    
+    --padding-st-s-h: 2rem;
+    --padding-st-s-v: 1rem; 
+    /* Font size Documantation */
+    --font-size-d-lc:calc(3rem + 3.5vw);
+    --font-size-d-l:calc(2rem + 3vw);
+    --font-size-d-mc:calc(1rem + 2.5vw);
+    --font-size-d-m:calc(1rem + 1.5vw);
+    --font-size-d-sc:calc(1rem + 1vw);
+     
+    /* static font size */
+    --font-size-st-xl:4rem;
+    --font-size-st-lc:3.5rem;
+    --font-size-st-l:3rem;
+    --font-size-st-mc:2.5rem;
+    --font-size-st-m:2rem;
+    --font-size-st-sc:1.5rem;
+    --font-size-st-sc:1rem;
+
+    /* font-family */
+
+    --font-family-title: 'Oswald', sans-serif;
+    --font-family-content: 'Caveat', cursive;
+ }
+
+ /* utility classes */
+ /* utility classes for section padding*/
+.section__padding{
+    padding: var(--padding-d-l-v) var(--padding-d-l-h);
+
+}
+/* section title */
+.section__title{
+    font-size: var(--font-size-d-sc);
+    font-weight: 900;
+}
+.section__para{
+    font-size: var(--font-size-st-sc);
+    color: var(--color-quaternary);
+}
+
+
+
+ body{
+background-color: var(--color-secondary);
+font-family: var(--font-family-content);
+line-height: 1.6;
+ }
+
+ a{
+    text-decoration: none;
+    border-radius: 1rem;
+ }
+
+
+ li{
+    list-style: none;
+ }
+
+.container{
+display: grid;
+grid-template-columns: [container-start]
+repeat(12, minmax(min-content,12.5rem))
+[content-end];
+grid-template-rows: repeat(9,min-content);
+}
