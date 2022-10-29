@@ -302,19 +302,19 @@ gap: 2rem;
     flex-basis: 50%;
     display: flex;
     justify-content: flex-end;
-   
+    
     position: relative;
   }
   
 .peronal-info__img img{
     height: 80%;
     width: 80%;
+    transition: all 0.25s ease-in-out;
+    object-fit: cover;
 
 }
 .peronal-info__img img:hover{
-    height: 100%;
-    width: 100%;
-    transition: all 0.5s ease-in-out;
+   transform: scale(0.97);
 
 }
   .peronal-info__img::before,
@@ -329,12 +329,12 @@ gap: 2rem;
     left: 16%;
     width: 50%;
     height: 50%;
-    background-color:white;
+    background-color:rgb(166, 166, 166);
   }
   .peronal-info__img::after{
     top: 5%;
     right: -5%;
     width: 80%;
     height: 100%;
-    background-color:white;
+    background-color:rgb(196, 190, 190);
   }
