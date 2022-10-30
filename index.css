@@ -338,3 +338,116 @@ gap: 2rem;
     height: 100%;
     background-color:rgb(196, 190, 190);
   }
+  .services{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+    text-align: center;
+    background-color: rgb(13, 14, 13);
+    color:white;
+    padding: 3rem;
+  }
+  .services__para{
+    text-align: center;
+  }
+  .services__service-cards{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(30rem,1fr));
+    gap: 4rem;
+  }
+  .services__service-cards--card i{
+    font-size: var(--font-size-d-l);
+  }
+  .services__service-cards--card h3{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: var(--font-size-d-m);
+  }
+  .services__service-cards--card:nth-child(2n){
+    border-bottom: 2px solid rgb(174, 172, 172);
+  }
+
+  
+  .services__service-cards--card:nth-child(2n + 1){
+    
+    border-top: 2px solid rgb(130, 129, 129);
+  }
+
+  /* News section */
+  .news{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+  .news__info{
+    display: flex;
+    flex-direction: column;
+    gap :3rem;
+  }
+  .news__info--title{
+    position: relative;
+    padding: 5rem;
+  }
+  .news__info--title::after{
+   
+    content: " ";
+    position: absolute;
+    bottom:0;
+    left: 0 ;
+  width: 70%;
+  height: 0.1rem;
+    background-color:var(--color-primary);
+    
+  }
+  .news__info--para{
+
+    padding: 3rem;
+  }
+
+
+  .news__article{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-template-rows: repeat(8, min-content);
+  } 
+  .news__article--content{
+  padding : 3rem;
+    grid-row: 2 / span 3;
+    background-color: white;
+    /* grid-row: 3/8; */
+    grid-column: 1/5;
+    display:flex;
+    flex-direction: column;
+  }
+  .news__article--content > div{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.5rem;
+  }
+  .news__article--content__mini-title{
+    background-color : black;
+    align-self: flex-start;
+    padding : 1rem ;
+    color: white ;
+  font-size: 2rem;
+  }
+  .news__article--content__para{
+font-size:2rem;
+  }
+  .news__article--content__title{
+    font-size: 3rem;
+  }
+  .news__article--img{
+    grid-column: 3/-1;
+    grid-row: 1/-1;
+    position: relative;
+    z-index: -1;
+  }
+ .news__article--img img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: all 0.25s ease-in-out;
+
+ }
